@@ -30,7 +30,7 @@
 						<nav>
 							<% if(info!=null){ %>
 								<a href="update.jsp">개인정보수정</a>
-								<a href="LogoutService">로그아웃</a>
+								<a href="LogoutService.do">로그아웃</a>
 							<% }else{ %>
 								<a href="#menu">로그인</a>
 							<% } %>
@@ -41,7 +41,7 @@
 					<nav id="menu">	
 						<ul class="links">
 							<li><h5>로그인</h5></li>
-								<form action="LoginService" method="post">
+								<form action="LoginService.do" method="post">
 									<li><input name="email" type="text"  placeholder="Email을 입력하세요"></li>
 									<li><input name="pw" type="password"  placeholder="PW를 입력하세요"></li>
 									<li><input type="submit" value="LogIn" class="button fit"></li>
@@ -49,7 +49,7 @@
 						</ul>
 						<ul class="actions vertical">
 							<li><h5>회원가입</h5></li>
-								<form action="JoinService" method="post">
+								<form action="JoinService.do" method="post">
 									<li><input name="email" type="text"  placeholder="Email을 입력하세요"></li>
 									<li><input name="pw" type="password"  placeholder="PW를 입력하세요"></li>
 									<li><input name="phone" type="text"  placeholder="전화번호를 입력하세요"></li>
@@ -162,7 +162,7 @@
 												out.print(list.get(i).getSend_date()+")");
 												
 												out.print("------------");
-												out.print("<a href='MsgDelete?num=");
+												out.print("<a href='MsgDelete.do?num=");
 												out.print(list.get(i).getNum()+"'>삭제</a>");
 												out.print("</li>");
 												out.print("<br>");
@@ -171,7 +171,7 @@
 										<% }else{ %>
 											<li>로그인을 하세요.</li>
 										<% } %>
-										<li><a href="MsgAllDelete" class="button next scrolly">전체삭제하기</a></li>
+										<li><a href="MsgAllDelete.do" class="button next scrolly">전체삭제하기</a></li>
 									</ul>
 								</div>
 							</section>
@@ -182,7 +182,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form action="MsgSendService" method="post">
+								<form action="MsgSendService.do" method="post">
 								<div class="field half first">
 										<label for="name">Name</label>
 										<input name="send_name"  type="text"  id="name" placeholder="보내는 사람 이름" />

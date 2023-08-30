@@ -18,7 +18,7 @@
 	
 		<h3>회원정보수정</h3>
 		<h1>접속한 Email: <%=info.getEmail() %></h1>
-		<form action="UpdateService" method="post">
+		<form action="UpdateService.do" method="post">
 			<input name="pw" type="password" placeholder="PW를 입력하세요">
 			<input name="tel" type="text" placeholder="전화번호를 입력하세요">
 			<input name="addr" type="text" placeholder="주소를 입력하세요">
