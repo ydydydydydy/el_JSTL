@@ -20,5 +20,6 @@ public class MsgDelete implements ICommand {
 		MessageDAO dao = new MessageDAO();
 		dao.delete(ch_num);
 		return "main.jsp#two";
+		
 	}
 }
